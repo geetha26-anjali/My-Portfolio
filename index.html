@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Geethanjali | CSBS Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+html{scroll-behavior:smooth}
+
+/* ===== MOTIONAL BUSINESS BACKGROUND ===== */
+body{
+background:linear-gradient(120deg,#0f2027,#203a43,#2c5364,#0f2027);
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
+color:#fff;
+overflow-x:hidden
+}
+
+.section{padding:45px 15px}
+h1,h2,h3{text-align:center}
+
+/* ===== DASHBOARD ===== */
+.main-dashboard{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+animation:fadeIn 1.2s ease
+}
+.profile-img{
+width:150px;height:150px;
+border-radius:50%;
+border:4px solid #56ccf2;
+margin-bottom:15px;
+animation:float 4s ease-in-out infinite
+}
+.main-dashboard h1{font-size:2.6rem}
+.main-dashboard span{color:#56ccf2}
+.main-dashboard p{opacity:.85;margin:8px 0 25px}
+.dash-links{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:18px;
+max-width:700px;width:100%;
+padding:0 20px
+}
+.dash-card{
+padding:18px;
+border-radius:16px;
+background:#1f2933;
+border:1px solid #56ccf2;
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.35s;
+box-shadow:0 12px 25px rgba(0,0,0,.3)
+}
+.dash-card:hover{
+transform:translateY(-6px) scale(1.05);
+background:linear-gradient(135deg,#2f80ed,#56ccf2)
+}
+
+/* ===== ABOUT ===== */
+#about{max-width:850px;margin:auto;text-align:center}
+#about p{margin-top:10px;opacity:.9}
+
+/* ===== SKILLS ===== */
+.sub-title{margin:30px 0 12px;font-size:20px;color:#dbe1ea}
+.tech-skills,.soft-skills{
+display:grid;gap:18px;max-width:900px;margin:auto
+}
+.tech-skills{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+.soft-skills{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.skill-box,.soft-skill-box{
+height:110px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:14px;
+background:#1f2933;
+border:1px solid #56ccf2;
+transition:.35s;
+opacity:0;
+transform:translateY(30px)
+}
+.soft-skill-box{height:95px}
+.skill-box:hover,.soft-skill-box:hover{
+transform:scale(1.08);
+background:linear-gradient(135deg,#2f80ed,#56ccf2)
+}
+
+/* ===== PROJECTS ===== */
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:22px;
+max-width:950px;
+margin:auto
+}
+.project-card{
+padding:20px;
+border-radius:16px;
+background:#1f2933;
+border:1px solid #56ccf2;
+transition:.35s;
+opacity:0;
+transform:translateY(30px)
+}
+.project-card:hover{
+transform:translateY(-6px) scale(1.03);
+background:linear-gradient(135deg,#56ccf2,#2f80ed)
+}
+
+/* ===== CERTIFICATIONS ===== */
+.certifications{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
+max-width:950px;
+margin:auto
+}
+.cert-card{
+padding:18px;
+border-radius:16px;
+background:#1f2933;
+border:1px solid #56ccf2;
+text-align:center;
+transition:.35s;
+opacity:0;
+transform:translateY(30px)
+}
+.cert-card h3{color:#56ccf2;margin-bottom:6px}
+.cert-card:hover{
+transform:translateY(-6px);
+background:linear-gradient(135deg,#2f80ed,#56ccf2)
+}
+
+/* ===== CONTACT ===== */
+.contact-box{
+max-width:450px;
+margin:auto;
+padding:22px;
+border-radius:18px;
+background:#1f2933;
+border:1px solid #56ccf2;
+text-align:center
+}
+.contact-box p{margin:8px 0}
+
+/* ===== FOOTER ===== */
+footer{text-align:center;padding:15px;opacity:.7}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+}
+@keyframes bgMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+.reveal.active{opacity:1;transform:translateY(0)}
+</style>
+</head>
+
+<body>
+
+<!-- ===== DASHBOARD ===== -->
+<section class="main-dashboard">
+<img src="profile.jpg" class="profile-img" alt="Profile">
+<h1>Hello, I'm <span>Geethanjali</span></h1>
+<p>
+CSBS Student |Computer Science and Business Systems student with a<br>
+strong foundation in programming, data analysis, and business strategy.<br>
+Passionate about building technology-driven solutions that align with<br>
+real-world business needs.
+</p>
+
+<div class="dash-links">
+<a href="#about" class="dash-card">About Me</a>
+<a href="#skills" class="dash-card">Skills</a>
+<a href="#projects" class="dash-card">Projects</a>
+<a href="#certifications" class="dash-card">Certifications</a>
+<a href="#contact" class="dash-card">Contact</a>
+</div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section reveal">
+<h2>About Me</h2>
+<p>
+Aspiring Computer Science & Business Systems student<br>
+passionate about software development, data-driven solutions, and scalable systems<br>
+that bridge technology with business strategy.
+</p>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="section">
+<h2>Skills</h2>
+
+<h3 class="sub-title">Technical Skills</h3>
+<div class="tech-skills">
+<div class="skill-box reveal">Java</div>
+<div class="skill-box reveal">Python</div>
+<div class="skill-box reveal">R Programming</div>
+<div class="skill-box reveal">MySQL</div>
+<div class="skill-box reveal">Data Structures</div>
+</div>
+
+<h3 class="sub-title">Professional Skills</h3>
+<div class="soft-skills">
+<div class="soft-skill-box reveal">Problem Solving</div>
+<div class="soft-skill-box reveal">Communication</div>
+<div class="soft-skill-box reveal">Team Work</div>
+<div class="soft-skill-box reveal">Critical Thinking</div>
+</div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="section">
+<h2>Projects</h2>
+<div class="projects">
+<div class="project-card reveal">
+<h3>Bank Account System</h3>
+<p>Java-based application for secure banking operations.</p>
+</div>
+<div class="project-card reveal">
+<h3>Inventory Management</h3>
+<p>Python system for real-time stock control.</p>
+</div>
+<div class="project-card reveal">
+<h3>Portfolio Website</h3>
+<p>Animated responsive portfolio using HTML & CSS.</p>
+</div>
+</div>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section id="certifications" class="section">
+<h2>Certifications</h2>
+<div class="certifications">
+<div class="cert-card reveal">
+<h3>Operational Research</h3>
+<p>Optimization & decision-making</p>
+</div>
+<div class="cert-card reveal">
+<h3>HackFusion 2.0</h3>
+<p>Hackathon participation</p>
+</div>
+<div class="cert-card reveal">
+<h3>Fundamentals of Management</h3>
+<p>Business principles</p>
+</div>
+<div class="cert-card reveal">
+<h3>Cyber Security Poster</h3>
+<p>Threat awareness & safety</p>
+</div>
+</div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section">
+<h2>Contact Me</h2>
+<div class="contact-box">
+<p>Email: geethanjalimk85@gmail.com</p>
+<p>LinkedIn: linkedin.com/in/geethanjali-mk-5681bb32a</p>
+<p>GitHub: github.com/geetha26-anjali</p>
+</div>
+</section>
+
+<footer>© 2026 | Designed by Geethanjali</footer>
+
+<script>
+const reveals=document.querySelectorAll(".reveal");
+window.addEventListener("scroll",()=>{
+reveals.forEach(r=>{
+if(r.getBoundingClientRect().top<window.innerHeight-80){
+r.classList.add("active");
+}
+});
+});
+</script>
+
+</body>
+</html>
